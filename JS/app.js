@@ -13,7 +13,7 @@ const p2 = {
 const resetButton = document.querySelector('#reset');
 const winningScoreSelect = document.querySelector('#playto'); 
 
-let winningScore  = 10;
+let winningScore  = 3;
 let isGameOver = false;
 
 function updateScores(player, opponent)
@@ -55,7 +55,7 @@ resetButton.addEventListener('click', reset);
 
 function reset()
 {
-    isGameOver = true;
+    isGameOver = false;
     for(let p of [p1,p2])
     {
         p.score = 0;
